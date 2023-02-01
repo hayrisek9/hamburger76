@@ -1,38 +1,330 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Serif Pro', serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+    width: 101px;
+    height: 101px;
 }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 79px;
+    background-color: #e94f37;
+}
+.rightSide a{
+    margin-right: 23px;
+    color:#fbfffe;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 5px 11px;
+    border-radius: 5px;
+    transition: .3;
+    position: relative;
+    font-weight: 900;
+    z-index: 1;
+    background: #20bf55;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.rightSide a:before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: rgba(16, 122, 139, 0.5);
+    transition: all 250ms;
+    border-radius: 5px;
+  }
+  .rightSide a:hover:before {
+    width: 100%;
+    border-radius: 5px;
+  }
+  @media (max-width: 600px) {
+    .leftSide img {
+      width: 50px;
+      height: 50px;
+      margin-left: 16px;
+    }
+    .rightSide a{
+      margin-right: 4px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5px;
+    }
+  }
+  @media (max-width: 360px) {
+    .leftSide img {
+      width: 50px;
+      height: 50px;
+      margin-left: 16px;
+    }
+    .rightSide a{
+      margin-right: 4px;
+      font-size: 13px;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5px;
+    }
+  }
+  .home{
+    width: 100%;
+    height: 131vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .headerContainer{
+    width: auto;
+    margin-left: 47px;
+    margin-top: -149px;
+  }
+  .headerContainer h1 {
+    font-size: 89px;
+    height: 61px;
+    font-weight: 50;
+    color: #fbfffe;
+  }
+
+  .headerContainer p{
+    font-size: 41px;
+    color: #fbfffe;
+    margin-top: 41px;
+    margin-bottom: 13px;
+  }
+  .headerContainer button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #474747;
+    color: #fbfffe;
+    height: 49px;
+    width: 179px;
+    font-size: 19px;
+  }
+  .headerContainer button:hover{
+    transition: .3s;
+    background-color: #191102;
+    color: #e94f37;
+    position: relative;
+    z-index: 1;
+  }
+  .footer{
+    height: 79px;
+    width: 100%;
+    background-color: #191102;
+    color: #fbfffe;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+text-align: center;
+  }
+  .social-media{
+    display: flex;
+    justify-content:space-between;
+    font-size: 43px;
+    margin-left: 427px;
+    margin-right: 427px;
+    margin-top: 11px;
+    
+  }
+  .social-media :nth-child(n){
+    cursor: pointer;
+  }
+  .social-media :nth-child(n):hover{
+    color: #e94f37;
+  }
+  .menu{
+    width: 100%;
+    text-align: center;
+    background-color: #20bf55;
+    padding: 19px;
+    height: 131vh;
+  }
+  .menuTitle{
+    font-size: 37px;
+
+  }
+  .menuList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+  .menuItem{
+    background-color: #e94f37;
+    width: 349px;
+    height: 349px;
+    margin: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .menuItem:hover{
+    transform: scale(1.02);
+    opacity: .9;
+  }
+  .menuItem img{
+    width: 337px;
+    height: 249px;
+    border-radius: 100%;
+  }
+  .menuitem h3{
+    font-size: 23px;
+    color: #191102;
+    margin-top: 11px;
+    letter-spacing: 1px;
+
+  }
+  .menuItem p {
+    font-size: 19px;
+    letter-spacing: 1px;
+  }
+
+@media (max-width:400px) {
+  .menu{
+    padding: 2px;
+  }
+  .menuItem{
+    width: 150px;
+    height: 150px;
+  }
+  .menuItem img{
+    width: 130px;
+    height: 50px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about{
+  width: 100%;
+  height: 101vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #20bf55;
+
+}
+.aboutTop{
+  width: 100%;
+  height: 79%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.aboutBottom{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ height: 25%;
+ margin-top: 47px;
+}
+.aboutBottom p {
+  margin-top: 19px;
+  margin-bottom: 19px;
+ 
+}
+.about .aboutBottom h1{
+  font-weight: 200;
+  font-size: 47px;
+  color: #191102;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.contact {
+  width: 100%;
+  height: 89vh;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.contact .leftSide {
+  height: 100%;
+  flex: 47%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact .rightSide {
+  height: 100%;
+  flex: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .rightSide h1 {
+  font-weight: 10;
+  font-size: 47px;
+  margin-left: 31px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 31px;
+}
+
+form input {
+  height: 41px;
+  width: 79%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+
+form textarea {
+  margin-top: 13px;
+  height: 71px;
+  width: 79%;
+  border: none;
+  border-bottom: 1px solid #121619;
+  color: black;
+}
+input::placeholder,
+textarea::placeholder {
+  font-weight: bold;
+  color: black;
+}
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form label {
+  margin-top: 13px;
+  color: #474747;
+}
+
+form button {
+  margin-top: 41px;
+  width: 139px;
+  height: 41px;
+  border: none;
+  background-color: #474747;
+  color: #fbfffe;
+  font-size: 15px;
+  cursor: pointer;
+}
+form button:hover{
+  background-color: #191102;
+  color: #e94f37;
 }
